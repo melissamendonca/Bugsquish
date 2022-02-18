@@ -35,7 +35,7 @@ function draw() {
       character[i].draw();
     }
     let time = timer();
-    let totalTime = 10;
+    let totalTime = 30;
     text("Time: " + (totalTime - time), 10, 30);
     if (time >= totalTime) {
       gameState = 'end';
@@ -76,17 +76,17 @@ function mousePressed() {
     ]
   }
 
-  function mouseDragged() {
-  for (i = 0; i < count; i++) {
-    character[i].drag();
-  }
-}
+  // function mouseDragged() {
+  // for (i = 0; i < count; i++) {
+  //  character[i].drag();
+  // }
+// }
 
-function mouseReleased() {
-  for (i = 0; i < count; i++) {
-    character[i].draw();
-  }
-  }
+// function mouseReleased() {
+ // for (i = 0; i < count; i++) {
+   // character[i].draw();
+  // }
+  // }
 
 class Character{
   constructor(spriteSheet, x, y, speed, move) {
@@ -105,8 +105,8 @@ class Character{
     let sx, sy;
     if (this.move ==0) {
       if (this.grabbed) { //squish animation
-        sx = this.spriteFrame % 7 + 5; // 140 * 
-        sy = 9; 
+        sx = 2; // 140 * 
+        sy = 5; 
       }
     }
       
